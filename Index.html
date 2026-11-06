@@ -89,8 +89,8 @@
                         <span class="font-mono text-bronze text-uppercase">Alberto Clock Company- Est.1987</span>
                     </div>
                     <h1 class="hero-h">
-                        <span class="big-num">01 —</span>The art of<br>
-                        <em>timekeeping.</em>
+                        <span class="big-num">—</span>The Art of<br>
+                        <em>Timekeeping.</em>
                     </h1>
                     <p class="text-muted mb-4" style="max-width:46ch; font-size:15px;">
                         A full-service watch repair, appraisal, and retail store. Discover an unparalleled selection of
@@ -101,66 +101,190 @@
                                 class="bi bi-arrow-right"></i></a>
                         <a href="#priceList" class="btn-text">View Price List <i class="bi bi-arrow-up-right"></i></a>
                     </div>
-                </div>
-            </div>
+
+                    <!-- Stats Row-->
+                    <div class="row hero-stats g-0">
+                        <div class="col-3">
+                            <div class="hs-num">12<em>+</em></div>
+                            <div class="font-mono text-uppercase text-muted">Curated Models</div>
+                            <div class="col-3">
+                                <div class="hs-num">04</div>
+                                <div class="font-mono text-uppercase text-muted">Collections</div>
+                                <div class="col-3">
+                                    <div class="hs-num">1987</div>
+                                    <div class="font-mono text-uppercase text-muted">Established</div>
+                                    <div class="col-3">
+                                        <div class="hs-num">5<em>yr</em></div>
+                                        <div class="font-mono text-uppercase text-muted">Warranty</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 position-relative d-flex justify-content-center"></div>
+                                ...
+                            </div>
+                        </div>
+                    </div>
     </header>
 
+    <!-- Collections-->
+    <section class="sec" id="collections">
+        <div class="container">
+            <div class="sec-header d-flex justify-content-between align-items-baseline flex-wrap gap-3">
+                <div class="d-flex align-items-baseline gap-3 flex-wrap">
+                    <span class="font-mono text-bronze fw-bold">01 - Collections</span>
+                    <div>
+                        <div class="font-mono text-muted text-uppercase mb-1">Our Inventory</div>
+                        <h2 class="sec-h">Curated<em>Collections</em>.</h2>
+                    </div>
+                </div>
+                <div>Alberto-Clocks.com * 2026</div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-6 offset-md-6 text-md-end">
+                    <p class="sec-lead mb-0">Explore our four distinct product lines. Whether you seek the archival
+                        charm of vintage pieces, the prestige of luxury models, the convenience of smart hybrids, or the
+                        ruggedness of sports watches.</p>
+                </div>
+            </div>
 
+            <!-- JS injects collection cards here -->
+            <div class="pl-scroll d-flex gap-3 overflow-auto pb-3" id="productLineContainer"></div>
+            ...
+        </div>
+    </section>
 
+    <!-- GALLERY -->
+    <section class="sec bg-ivory-2" id="gallery">
+        <div class="container">
+            <div class="sec-header d-flex justify-content-between align-items-baseline flex-wrap gap-3">
+                <div class="d-flex align-items-baseline gap-3 flex-wrap">
+                    <span class="font-mono text-bronze fw-bold">02 — Gallery</span>
+                    <div>
+                        <div class="font-mono text-muted text-uppercase mb-1">Craftsmanship</div>
+                        <h2 class="sec-h">The <em>Artistry</em> of Horology.</h2>
+                    </div>
+                </div>
+                <div class="font-mono text-muted">Photographed in Pakistan</div>
+            </div>
+            <!-- JS injects gallery images here -->
+            <div class="gallery-grid" id="galleryContainer"></div>
+        </div>
+    </section>
 
+    <!-- PRICE LIST -->
+    <section class="sec" id="priceList">
+        <div class="container">
+            <div class="sec-header d-flex justify-content-between align-items-baseline flex-wrap gap-3">
+                <div class="d-flex align-items-baseline gap-3 flex-wrap">
+                    <span class="font-mono text-bronze fw-bold">03 — Price List</span>
+                    <div>
+                        <div class="font-mono text-muted text-uppercase mb-1">Retail & Appraisal</div>
+                        <h2 class="sec-h">The collection <em>at a glance</em>.</h2>
+                    </div>
+                </div>
+                <div class="font-mono text-muted">Search · Sort · Details</div>
+            </div>
 
+            <div class="price-tray p-3">
+                <div
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-3 pb-3 border-bottom border-hair mb-2">
+                    <div class="d-flex align-items-center bg-ivory-2 border border-hair rounded-pill px-3 py-1"
+                        style="flex:1; max-width:320px;">
+                        <i class="bi bi-search text-muted me-2"></i>
+                        <input type="text" id="priceSearch" placeholder="Search by model or collection…"
+                            class="bg-transparent border-0 text-dark font-monospace"
+                            style="outline:none; width:100%; font-size:11px;">
+                    </div>
+                    ...
+                </div>
+                <!-- JS injects price rows here -->
+                <div id="priceTableBody"></div>
+            </div>
+        </div>
+    </section>
 
+    <!-- ABOUT + CONTACT -->
+    <section class="sec bg-ivory-2" id="aboutContact">
+        <div class="container">
+            <div class="sec-header d-flex justify-content-between align-items-baseline flex-wrap gap-3">
+                <div class="d-flex align-items-baseline gap-3 flex-wrap">
+                    <span class="font-mono text-bronze fw-bold">04 — About / Contact</span>
+                    <div>
+                        <div class="font-mono text-muted text-uppercase mb-1">The Company · Reach us</div>
+                        <h2 class="sec-h">Four decades of <em>excellence</em>.</h2>
+                    </div>
+                </div>
+                <div class="font-mono text-muted">Est. 1987 · Pakistan</div>
+            </div>
 
+            <div class="row g-4">
+                <!-- About Panel -->
+                <div class="col-lg-6">
+                    <div class="ac-panel about p-4 h-100">
+                        <span class="ac-tag text-bronze mb-3"><i class="bi bi-shop"></i> About the Company</span>
+                        <h3 class="font-serif mb-3" style="font-size:clamp(22px,2.8vw,30px);">Unparalleled
+                            selection.<br><em>First-class service.</em></h3>
+                        <p class="ac-body drop-cap text-muted mb-3">
+                            Alberto Watch Company is a full-service watch repair, appraisal, and retail store. Founded
+                            in Pakistan, we offer the finest selection of luxury timepieces alongside first-class
+                            service.
+                        </p>
+                        <p class="ac-body text-muted mb-0">
+                            We also carry a wide selection of brand-new watches, including top names like Michael Kors,
+                            Rolex, Citizen Eco-Drive, and Bulova.
+                        </p>
+                        <div class="border-top border-hair pt-3 mt-4 d-flex gap-3 align-items-start">
+                            <i class="bi bi-geo-alt text-bronze fs-5 mt-1"></i>
+                            <div>
+                                <strong class="font-serif d-block mb-1 fs-6">Atelier &amp; Boutique</strong>
+                                <span class="font-mono text-muted" style="font-size:10px;">Street-250 , Defence Phase
+                                    VII<br>360-B
+                                    Karachi, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Contact Panel -->
+                <div class="col-lg-6">
+                    ...
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <footer class="footer pt-5 pb-4 mt-4">
+        ...
+        <div class="col-lg-4">
+            <h4 class="font-serif text-white mb-2" style="font-size:24px;">Alberto <em class="text-gold">Watch Co.</em>
+            </h4>
+            <p class="text-white-50" style="font-size:12px; max-width:30ch;">Full-service watch repair, appraisal, and
+                retail store. Offering an unparalleled selection of luxury timepieces.</p>
+        </div>
+        ...
+    </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- ... at the bottom ... -->
+    <div class="ticker">
+        <div class="ticker-inner">
+            <span><i class="bi bi-calendar3 text-gold"></i><span id="tickerDate">…</span></span>
+            <span class="ticker-sep"></span>
+            <span><i class="bi bi-clock text-gold"></i><span id="tickerTime">…</span></span>
+            <span class="ticker-sep"></span>
+            <span><i class="bi bi-geo-alt text-gold"></i><span id="tickerLocation">…</span></span>
+            <span class="ticker-sep"></span>
+            <span><strong>Alberto Watch Co.</strong> · Full-Service Repair, Appraisal & Retail</span>
+        </div>
+    </div>
 
     <!-- Bootstrap JS bundle-->
-     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- JQuery (Required for Custom scripts for future)-->
-      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- Our Custom Javascript-->
-     <script src="js/script.js"></script>
-      
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>
