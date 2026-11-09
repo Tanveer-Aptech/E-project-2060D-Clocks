@@ -21,63 +21,60 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top">
-        <div class="container px-3 px-lg-4">
-            <div class="navbar-inner w-100">
+    <!-- NAVBAR -->
+<nav class="navbar fixed-top">
+  <div class="container px-3 px-lg-4">
+    <div class="navbar-inner w-100">
+      
+      <div class="d-flex align-items-center justify-content-between w-100">
+        
+        <!-- LEFT LINKS  -->
+        <ul class="navbar-nav d-none d-lg-flex flex-row gap-4 m-0" style="flex: 1; justify-content: flex-end; padding-right: 2rem;">
+          <li class="nav-item"><a class="nav-link" href="#collections">Collections</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+        </ul>
 
-                <!-- Top Row-->
-                <div class="d-flex align-items-center justify-content-between w-100">
+        <!-- CENTER BRAND -->
+        <a href="#top" class="navbar-brand m-0 p-0 d-flex align-items-center gap-3">
+          <span class="brand-diamond"><i class="bi bi-clock"></i></span>
+          <span class="brand-text">
+            <span class="brand-main">ALBERTO</span>
+            <span class="brand-sub">Horology.Pakistan</span>
+          </span>
+        </a>
 
-                    <!-- Links on the left-->
-                    <ul class="navbar-nav d-none d-lg-flex flex-row gap-4 flex-grow-1 justify-content-end pe-4">
-                        <li class="nav-items"><a class="nav-link" href="#collections">Collections</a></li>
-                        <li class="nav-items"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    </ul>
+        <!-- RIGHT LINKS & TOGGLE -->
+        <div class="d-flex align-items-center m-0" style="flex: 1; justify-content: space-between; padding-left: 2rem;">
+          
+          <!-- Right Links -->
+          <ul class="navbar-nav d-none d-lg-flex flex-row gap-4 m-0">
+            <li class="nav-item"><a class="nav-link" href="#">Price List</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
 
-                    <!-- Brand Name (PlaceHolder for logo)-->
-                    <a href="#top" class="navbar-brand m-0 p-0 d-flex align-items-center gap-3">
-                        <span class="brand-diamond"><i class="bi bi-clock"></i></span>
-                        <span class="brand-text">
-                            <span class="brand-main">ALBERTO</span>
-                            <span class="brand-sub"></span>
-                        </span>
-                    </a>
-
-                    <!-- Desktop Right Links + Mobile toggle (My UI design)-->
-                    <div
-                        class="d-flex align-items-center gap-2 gap-lg-3 flex-grow-1 justify-content-end justify-content-lg-start">
-                        <ul class="navbar-nav d-none d-lg-flex flex-row gap-4 me-3">
-                            <li class="nav-items"><a class="nav-link" href="#pricelist">Price List</a></li>
-                            <li class="nav-items"><a class="nav-link" href="#aboutcontact">Contact</a></li>
-                        </ul>
-
-                        <!-- Burger Type Toggler (shadow-ui gitrepo) (hidden on desktop)-->
-                        <button class="navbar-toggler d-lg-none border-0 shadow-none p-0 ms-01" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#navContent">
-                            <span class="d-flex align-items-center justify-content-center border rounded-circle"
-                                style="width: 36px;height: 36px; border: color var(--hair-2) !important;">
-                                <i class="bi bi-list fs-5"></i>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <!-- Mobile drawer (Add as place holder for responsive checks) (Rounded pill design)-->
-                <div class="collapse d-lg-none w-100 mt-3 mb-1" id="navContent">
-                    <div class="bg-ivory border border-hair rounded-3 p-2 shadow-sm">
-                        <a class="d-block p-3 border-bottom border-hair fw-medium text-dark"
-                            href="#collections">Collections</a>
-                        <a class="d-block p-3 border-bottom border-hair fw-medium text-dark" href="#gallery">Gallery</a>
-                        <a class="d-block p-3 border-bottom border-hair fw-medium text-dark"
-                            href="#aboutcontact">Contact</a>
-                        <a class="d-block p-3 border-bottom border-hair fw-medium text-dark" href="#sitemap">Sitemap</a>
-                    </div>
-                </div>
-            </div>
+          <!-- Mobile Toggle -->
+          <button class="navbar-toggler d-lg-none border-0 shadow-none p-0 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+            <i class="bi bi-list fs-4"></i>
+          </button>
+          
         </div>
-    </nav>
+      </div>
 
-    <!-- Hero Section-->
+      <!-- MOBILE MENU DRAWER -->
+      <div class="collapse d-lg-none w-100 mt-3 mb-1" id="navContent">
+        <div class="bg-white border rounded shadow-sm p-2">
+          <a href="#collections" class="d-block p-3 border-bottom text-dark text-decoration-none">Collections</a>
+          <a href="#" class="d-block p-3 border-bottom text-dark text-decoration-none">Gallery</a>
+          <a href="#" class="d-block p-3 border-bottom text-dark text-decoration-none">Price List</a>
+          <a href="#" class="d-block p-3 text-dark text-decoration-none">Contact</a>
+        </div>
+      </div>
 
+    </div>
+  </div>
+</nav>
+
+    <!-- HERO Section -->
     <header class="hero" id="top">
         <div class="container">
             <div class="row align-items-center g-5">
@@ -85,11 +82,11 @@
                 <!-- Hero Text -->
                 <div class="col-lg-7">
                     <div class="d-flex align-items-center gap-3 mb-4">
-                        <span style="width: 32px; height: 1px; background: var(--bronze-2);"></span>
-                        <span class="font-mono text-bronze text-uppercase">Alberto Clock Company- Est.1987</span>
+                        <span style="width:32px;height:1px;background:var(--bronze)"></span>
+                        <span class="font-mono text-bronze text-uppercase">Alberto Watch Company — Est. 1987</span>
                     </div>
                     <h1 class="hero-h">
-                        <span class="big-num">—</span>The Art of<br>
+                        <span class="big-num"></span>The Art of<br>
                         <em>Timekeeping.</em>
                     </h1>
                     <p class="text-muted mb-4" style="max-width:46ch; font-size:15px;">
@@ -97,58 +94,82 @@
                         luxury timepieces — from brand-new icons to meticulously restored vintage classics.
                     </p>
                     <div class="d-flex align-items-center gap-3 flex-wrap mb-4">
-                        <a href="#collections" class="btn-primary">Explore Collections <i
-                                class="bi bi-arrow-right"></i></a>
-                        <a href="#priceList" class="btn-text">View Price List <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="#collections" class="btn btn-dark px-4 py-2 rounded-1 shadow-sm">Explore Collections <i
+                                class="bi bi-arrow-right ms-1"></i></a>
+                        <a href="#"
+                            class="btn btn-link text-dark text-decoration-none p-2 border-bottom border-dark rounded-pill">View
+                            Price List <i class="bi bi-arrow-up-right"></i></a>
                     </div>
 
-                    <!-- Stats Row-->
+                    <!-- Stats Row -->
                     <div class="row hero-stats g-0">
-                        <div class="col-3">
-                            <div class="hs-num">12<em>+</em></div>
-                            <div class="font-mono text-uppercase text-muted">Curated Models</div>
-                            <div class="col-3">
-                                <div class="hs-num">04</div>
-                                <div class="font-mono text-uppercase text-muted">Collections</div>
-                                <div class="col-3">
-                                    <div class="hs-num">1987</div>
-                                    <div class="font-mono text-uppercase text-muted">Established</div>
-                                    <div class="col-3">
-                                        <div class="hs-num">5<em>yr</em></div>
-                                        <div class="font-mono text-uppercase text-muted">Warranty</div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 position-relative d-flex justify-content-center"></div>
-                                ...
-                            </div>
+                        <div class="col-3 border-end pe-3">
+                            <div class="fs-3 font-serif">12<em>+</em></div>
+                            <div class="font-mono text-muted text-uppercase">Models</div>
+                        </div>
+                        <div class="col-3 border-end px-3">
+                            <div class="fs-3 font-serif">04</div>
+                            <div class="font-mono text-muted text-uppercase">Collections</div>
+                        </div>
+                        <div class="col-3 border-end px-3">
+                            <div class="fs-3 font-serif">1987</div>
+                            <div class="font-mono text-muted text-uppercase">Established</div>
+                        </div>
+                        <div class="col-3 ps-3">
+                            <div class="fs-3 font-serif">5<em>yr</em></div>
+                            <div class="font-mono text-muted text-uppercase">Warranty</div>
                         </div>
                     </div>
-    </header>
+                </div>
 
-    <!-- Collections-->
-    <section class="sec" id="collections">
-        <div class="container">
-            <div class="sec-header d-flex justify-content-between align-items-baseline flex-wrap gap-3">
-                <div class="d-flex align-items-baseline gap-3 flex-wrap">
-                    <span class="font-mono text-bronze fw-bold">01 - Collections</span>
-                    <div>
-                        <div class="font-mono text-muted text-uppercase mb-1">Our Inventory</div>
-                        <h2 class="sec-h">Curated<em>Collections</em>.</h2>
+                <!-- Right Image VIA JSON + Badges -->
+                <div class="col-lg-5 position-relative d-flex justify-content-center">
+                    <div class="position-relative w-100" style="max-width: 400px;">
+                        <img id="heroImg" class="img-fluid rounded shadow" alt="Featured Watch" src="">
+
+                        <!-- Bootstrap-styled Badges -->
+                        <div
+                            class="position-absolute top-0 start-0 translate-middle-y ms-3 bg-white p-2 rounded shadow-sm d-flex align-items-center gap-2 border">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <span class="fw-bold small">4.9</span>
+                            <span class="text-muted small">Rated</span>
+                        </div>
+                        <div
+                            class="position-absolute bottom-0 end-0 translate-middle-y me-3 bg-white p-2 rounded shadow-sm d-flex align-items-center gap-2 border">
+                            <i class="bi bi-shield-check text-success"></i>
+                            <span class="fw-bold small">5 YR</span>
+                            <span class="text-muted small">Warranty</span>
+                        </div>
                     </div>
                 </div>
-                <div>Alberto-Clocks.com * 2026</div>
+
             </div>
+        </div>
+    </header>
+
+    <!-- COLLECTIONS -->
+    <section class="py-5" id="collections">
+        <div class="container">
+            <!-- Header -->
+            <div class="border-bottom pb-3 mb-4 d-flex justify-content-between align-items-baseline flex-wrap">
+                <div>
+                    <div class="font-mono text-bronze fw-bold mb-1">01 — Collections</div>
+                    <h2 class="font-serif display-6">Curated <em>Collections</em>.</h2>
+                </div>
+                <div class="font-mono text-muted">alberto-clocks.com · 2026</div>
+            </div>
+
             <div class="row mb-4">
                 <div class="col-md-6 offset-md-6 text-md-end">
-                    <p class="sec-lead mb-0">Explore our four distinct product lines. Whether you seek the archival
-                        charm of vintage pieces, the prestige of luxury models, the convenience of smart hybrids, or the
-                        ruggedness of sports watches.</p>
+                    <p class="text-muted small mb-0">Explore our four distinct product lines. Whether you seek the
+                        archival charm of vintage pieces, the prestige of luxury models, the convenience of smart
+                        hybrids, or the ruggedness of sports watches.</p>
                 </div>
             </div>
 
-            <!-- JS injects collection cards here -->
-            <div class="pl-scroll d-flex gap-3 overflow-auto pb-3" id="productLineContainer"></div>
-            ...
+            <!-- Horizontal Scroll (Bootstrap d-flex + overflow-auto) -->
+            <div class="d-flex gap-3 overflow-auto pb-3" id="productLineContainer"
+                style="scroll-snap-type: x mandatory;"></div>
         </div>
     </section>
 

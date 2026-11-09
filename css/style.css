@@ -19,170 +19,76 @@
     --hair-2: hsla(38, 26%, 69%, 1);
 }
 
-/* Base Body Styles */
 body {
     background-color: var(--ivory);
     color: var(--espresso);
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-    padding-bottom: 44px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/*Base TypoGraphy for all the fonts and headings links and images*/
-
-h1,
-h2,
-h3,
-h4 {
-    font-weight: 500;
-    line-height: 1.02;
-    letter-spacing: -0.015em;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-/* =========================================
-   2. TYPOGRAPHY & COLOR UTILITIES
-   ========================================= */
+/* Fonts Typography */
 .font-serif {
     font-family: 'Cormorant Garamond', serif;
 }
 
-.font-cinzel {
-    font-family: 'Cinzel', serif;
-}
-
 .font-mono {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-}
-
-.text-wine {
-    color: var(--wine) !important;
+    font-size: 11px;
+    letter-spacing: 0.05em;
 }
 
 .text-bronze {
-    color: var(--bronze-2) !important;
+    color: var(--bronze) !important;
 }
 
-.text-muted {
-    color: var(--muted) !important;
-}
-
-.text-gold {
-    color: var(--gold) !important;
-}
-
-.bg-ivory {
-    background-color: var(--ivory) !important;
-}
-
-.bg-ivory-2 {
-    background-color: var(--ivory-2) !important;
-}
-
-.bg-espresso {
-    background-color: var(--espresso) !important;
-    color: var(--ivory);
-}
-
-.border-hair {
-    border-color: var(--hair) !important;
-}
-
-.border-espresso {
-    border-color: var(--espresso) !important;
-}
-
-
-/* =========================================
-   3. NAVBAR (Glassmorphism taken via GlassUI Git Repo)
-   ========================================= */
+/* Navbar Glass Effect VIA UI/UX Git repo */
 .navbar {
     padding-top: 16px;
-    transition: all 0.4s cubic-bezier(.2, .8, .2, 1);
+    transition: all 0.4s ease;
     pointer-events: none;
 }
 
 .navbar-inner {
-    background: transparent;
-    border: 1px solid transparent;
-    border-radius: 100px;
     padding: 10px 24px;
     transition: all 0.4s ease;
     pointer-events: auto;
+    border-radius: 100px;
 }
 
-/* Glass Effect using HSLA for better Transparency*/
-body.scrolled.navbar {
+body.scrolled .navbar {
     padding-top: 10px;
 }
 
-body.scrolled.navbar-inner,
-.navbar-inner:has(.navbar-collapse.show) {
-    background: hsla(39, 44%, 93%, 0.85);
-    backdrop-filter: blur(24px) saturate(200%);
-    -webkit-backdrop-filter: blur(24px) saturate(200%);
-    border-color: hsla(38, 26%, 69%, 0.9);
-    box-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.85) inset, 0 8px 32px -8px hsla(27, 27%, 10%, 0.2);
-}
-
-@media (max-width: 991px) {
-    .navbar-inner:has(.navbar-collapse.show) {
-        border-radius: 24px;
-        max-width: calc(100% - 24px);
-    }
+body.scrolled .navbar-inner {
+    background: rgba(245, 239, 228, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .nav-link {
-    font-size: 12px;
-    font-weight: 500;
     color: var(--espresso) !important;
-    padding: 4px 0 !important;
-    position: relative;
+    font-size: 13px;
+    font-weight: 500;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background: var(--bronze-2);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+.nav-link:hover {
+    color: var(--bronze) !important;
 }
 
-.nav-link::after,
-.nav-link.active::after {
-    transform: scaleX(1);
-}
-
-.brand-diamond::before {
-    content: '';
-    position: absolute;
-    inset: 4px;
-    border: 1px solid hsla(39, 50%, 57%, 0.6);
-    border-radius: 2px;
+/* Diamond Logo VIA Different references from various Git repos */
+.brand-diamond {
+    width: 30px;
+    height: 30px;
+    background: var(--wine);
+    transform: rotate(45deg);
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
 }
 
 .brand-diamond i {
     transform: rotate(-45deg);
-    color: var(--gold-soft);
-    font-size: 0.7rem;
+    color: #fff;
+    font-size: 0.8rem;
 }
 
 .brand-text {
@@ -201,26 +107,19 @@ body.scrolled.navbar-inner,
 .brand-sub {
     font-family: 'JetBrains Mono', monospace;
     font-size: 8px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    color: var(--bronze-2);
+    color: var(--bronze);
     margin-top: 3px;
-    text-transform: uppercase;
 }
 
-/* =========================================
-   4. HERO SECTION
-   ========================================= */
+/* Hero Typography */
 .hero {
-    padding: 110px 0 48px;
-    position: relative;
-    overflow: hidden;
+    padding: 120px 0 60px;
 }
 
 .hero-h {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(48px, 7vw, 92px);
-    line-height: 0.94;
+    line-height: 1;
     letter-spacing: -0.03em;
     margin-bottom: 22px;
 }
@@ -234,6 +133,107 @@ body.scrolled.navbar-inner,
     font-style: italic;
     color: var(--bronze);
     font-size: 0.85em;
-    vertical-align: -0.15em;
     margin-right: 8px;
+}
+
+.hero-stats {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.hero-stats em {
+    font-style: italic;
+    color: var(--wine);
+    font-size: 0.7em;
+}
+
+/* Collection Cards (Snap Scroll) */
+.pl-card {
+    min-width: 250px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    transition: transform 0.2s;
+}
+
+.pl-card:hover {
+    transform: translateY(-5px);
+}
+
+.pl-icon-frame {
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--bronze);
+    transform: rotate(45deg);
+    display: grid;
+    place-items: center;
+}
+
+.pl-icon-frame i {
+    transform: rotate(-45deg);
+    font-size: 1rem;
+}
+
+/* =========================================
+   HOVER ANIMATIONS (Cards & Buttons) VIA UI/UX Git repo
+   ========================================= */
+
+/* 1. Collection Cards */
+.pl-card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* The Golden Line (Hidden by default, width 0) */
+.pl-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--bronze);
+    transition: width 0.35s ease;
+}
+
+/* Pop-out and shadow on hover */
+.pl-card:hover {
+    transform: translateY(-5px);
+    /* Lifts the card up */
+    box-shadow: 6px 6px 0 rgba(168, 120, 41, 0.8);
+    /* Bronze hard shadow */
+    border-color: var(--bronze) !important;
+}
+
+/* Expand the golden line to 100% on hover */
+.pl-card:hover::before {
+    width: 100%;
+}
+
+/* 2. The Explore Button */
+.btn-dark {
+    background-color: var(--espresso);
+    border: 1px solid var(--espresso);
+    transition: all 0.25s ease;
+}
+
+.btn-dark:hover {
+    background-color: var(--wine);
+    /* Changes to deep red */
+    border-color: var(--wine);
+    transform: translate(-2px, -2px);
+    /* Pops out */
+    box-shadow: 4px 4px 0 var(--bronze) !important;
+    /* Hard shadow */
+}
+
+/* 3. The Icon inside the Card */
+.pl-icon-frame {
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.pl-card:hover .pl-icon-frame {
+    transform: rotate(45deg) scale(1.1);
+    /* Slightly grows the diamond */
+    border-color: var(--wine);
+    /* Turns from bronze to red */
 }

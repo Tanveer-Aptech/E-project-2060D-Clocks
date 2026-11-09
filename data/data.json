@@ -1,23 +1,17 @@
 {
   "productLines": [
-    { "id": "vintage", "name": "Vintage", "icon": "bi-hourglass", "description": "Meticulously restored archival timepieces.", "roman": "I" },
-    { "id": "luxury", "name": "Luxury", "icon": "bi-gem", "description": "Prestige brands: Rolex, Omega, and more.", "roman": "II" },
-    { "id": "smart", "name": "Smart Watches", "icon": "bi-cpu", "description": "Modern hybrid technology meets classic design.", "roman": "III" },
-    { "id": "sport", "name": "Sport", "icon": "bi-stopwatch", "description": "Rugged, water-resistant precision instruments.", "roman": "IV" }
+    { "id": "vintage", "name": "Vintage", "icon": "bi-hourglass", "description": "Archive-inspired, hand-wound mechanicals.", "roman": "I" },
+    { "id": "luxury", "name": "Luxury", "icon": "bi-gem", "description": "Precious metals, tourbillons, hand-finishing.", "roman": "II" },
+    { "id": "smart", "name": "Smart Watches", "icon": "bi-cpu", "description": "Connected, with proper Swiss cases.", "roman": "III" },
+    { "id": "sport", "name": "Sport", "icon": "bi-stopwatch", "description": "Precision instruments for the field.", "roman": "IV" }
   ],
   "watches": [
-    { "id": 1, "name": "Heritage 1952", "line": "Vintage", "price": 2450, "description": "Fully serviced vintage mechanical. 38mm steel case, sapphire crystal, and genuine leather strap.", "dial": "#ede5d3", "case": "#c9c0ad" },
-    { "id": 2, "name": "Citizen Eco-Drive", "line": "Vintage", "price": 1890, "description": "Light-powered movement. Roman numerals, small seconds sub-dial, and stainless steel case.", "dial": "#f0ebdf", "case": "#b8ad97" },
-    { "id": 3, "name": "Art Deco 1928", "line": "Vintage", "price": 3150, "description": "Appraised collector's piece. Geometric guilloché dial with a gold-plated case.", "dial": "#e8dfc9", "case": "#d4c9ac" },
-    { "id": 4, "name": "Rolex Datejust", "line": "Luxury", "price": 8900, "description": "Pre-owned luxury icon. Platinum and steel case, automatic movement, and jubilee bracelet.", "dial": "#e8e3d5", "case": "#c9c9c9" },
-    { "id": 5, "name": "Michael Kors Éclat", "line": "Luxury", "price": 6700, "description": "Brand new designer piece. 18k white gold, diamond-set bezel, and mother-of-pearl dial.", "dial": "#f2ede1", "case": "#d8d4c5" },
-    { "id": 6, "name": "Skeleton Grande", "line": "Luxury", "price": 10500, "description": "Open-worked exhibition movement, hand-engraved bridges, and solid rose gold case.", "dial": "#efe5d2", "case": "#d4b48f" },
-    { "id": 7, "name": "Alberto Connect", "line": "Smart Watches", "price": 399, "description": "Brand new smart watch. AMOLED display, heart-rate monitor, GPS, and 7-day battery life.", "dial": "#3a3026", "case": "#7a7570" },
-    { "id": 8, "name": "Hybrid Classic", "line": "Smart Watches", "price": 549, "description": "Analog hands with smart notifications, activity tracking, and scratch-resistant sapphire glass.", "dial": "#e8e3d5", "case": "#b8b3a5" },
-    { "id": 9, "name": "Titan Smart", "line": "Smart Watches", "price": 699, "description": "Titanium case, ECG, SpO2, dual-band GPS, and an impressive 14-day battery.", "dial": "#4a4036", "case": "#8b8680" },
-    { "id": 10, "name": "Diver 300M", "line": "Sport", "price": 2800, "description": "Water-resistant to 300m. Ceramic bezel, luminous hands, and a durable rubber strap.", "dial": "#2a3228", "case": "#a8a89a" },
-    { "id": 11, "name": "Bulova Chrono", "line": "Sport", "price": 2250, "description": "Brand new chronograph. Tachymeter, carbon fiber dial, and perforated leather strap.", "dial": "#3a2a1a", "case": "#b8b0a0" },
-    { "id": 12, "name": "Alpine Pro", "line": "Sport", "price": 1750, "description": "Shock-resistant outdoor watch. Altimeter, compass, and rugged titanium construction.", "dial": "#e8e5d8", "case": "#a8a294" }
+    { "id": 1, "name": "Heritage 1952", "line": "Vintage", "price": 2450, "description": "Hand-wound, 38mm steel.", "img": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=800&q=80" },
+    { "id": 2, "name": "Classic Roman", "line": "Vintage", "price": 1890, "description": "Roman numerals, small seconds.", "img": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=800&q=80" },
+    { "id": 3, "name": "Art Deco 1928", "line": "Vintage", "price": 3150, "description": "Limited edition, gold-plated case.", "img": "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=800&q=80" },
+    { "id": 4, "name": "Platinum Regent", "line": "Luxury", "price": 8900, "description": "Platinum case, tourbillon.", "img": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=800&q=80" },
+    { "id": 5, "name": "Diamond Éclat", "line": "Luxury", "price": 6700, "description": "18k white gold, diamond bezel.", "img": "https://images.unsplash.com/photo-1508057198894-247b23fe5e6a?w=800&q=80" },
+    { "id": 6, "name": "Skeleton Grande", "line": "Luxury", "price": 10500, "description": "Open-worked movement, rose gold.", "img": "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=800&q=80" }
   ],
   "gallery": [
     { "dial": "#ede5d3", "case": "#c9c0ad", "alt": "Dial — Heritage 1952" },
