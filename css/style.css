@@ -1,0 +1,867 @@
+/* =========================================
+   1. DESIGN SYSTEM & VARIABLES (HSLA Values that i use)
+   ========================================= */
+:root {
+    /* Format: hsla(hue, saturation, lightness, alpha) */
+    --ivory: hsla(39, 44%, 93%, 1);
+    --ivory-2: hsla(41, 38%, 87%, 1);
+    --espresso: hsla(27, 27%, 10%, 1);
+    --bronze: hsla(30, 42%, 39%, 1);
+    --bronze-2: hsla(37, 61%, 41%, 1);
+    --gold: hsla(39, 50%, 57%, 1);
+    --gold-2: hsla(41, 56%, 66%, 1);
+    --gold-soft: hsla(45, 54%, 81%, 1);
+    --wine: hsla(353, 42%, 32%, 1);
+    --wine-2: hsla(352, 42%, 39%, 1);
+    --muted: hsla(40, 11%, 38%, 1);
+    --muted-2: hsla(37, 11%, 56%, 1);
+    --hair: hsla(38, 30%, 79%, 1);
+    --hair-2: hsla(38, 26%, 69%, 1);
+}
+
+body {
+    background-color: var(--ivory);
+    color: var(--espresso);
+    overflow-x: hidden;
+}
+
+/* Fonts Typography */
+.font-serif {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+}
+
+.text-bronze {
+    color: var(--bronze) !important;
+}
+
+/* Navbar Glass Effect VIA UI/UX Git repo */
+.navbar {
+    padding-top: 16px;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.navbar-inner {
+    padding: 10px 24px;
+    transition: all 0.4s ease;
+    pointer-events: auto;
+    border-radius: 100px;
+}
+
+body.scrolled .navbar {
+    padding-top: 10px;
+}
+
+body.scrolled .navbar-inner {
+    background: rgba(245, 239, 228, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+    color: var(--espresso) !important;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--bronze) !important;
+}
+
+/* Diamond Logo VIA Different references from various Git repos */
+.brand-diamond {
+    width: 30px;
+    height: 30px;
+    background: var(--wine);
+    transform: rotate(45deg);
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+}
+
+.brand-diamond i {
+    transform: rotate(-45deg);
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-main {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+}
+
+.brand-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    color: var(--bronze);
+    margin-top: 3px;
+}
+
+/* Hero Typography */
+.hero {
+    padding: 120px 0 60px;
+}
+
+.hero-h {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 22px;
+}
+
+.hero-h em {
+    font-style: italic;
+    color: var(--wine);
+}
+
+.hero-h .big-num {
+    font-style: italic;
+    color: var(--bronze);
+    font-size: 0.85em;
+    margin-right: 8px;
+}
+
+.hero-stats {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.hero-stats em {
+    font-style: italic;
+    color: var(--wine);
+    font-size: 0.7em;
+}
+
+.hero-img-wrapper {
+  width: 100%;
+  max-width: 450px; 
+  height: 380px;    
+  margin: 0 auto;
+}
+
+/* Ensure carousel images fill the container without stretching */
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Collection Cards (Snap Scroll) */
+.pl-card {
+    min-width: 250px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    transition: transform 0.2s;
+}
+
+.pl-card:hover {
+    transform: translateY(-5px);
+}
+
+.pl-icon-frame {
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--bronze);
+    transform: rotate(45deg);
+    display: grid;
+    place-items: center;
+}
+
+.pl-icon-frame i {
+    transform: rotate(-45deg);
+    font-size: 1rem;
+}
+
+/* =========================================
+   HOVER ANIMATIONS (Cards & Buttons) VIA UI/UX Git repo
+   ========================================= */
+
+/* 1. Collection Cards */
+.pl-card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* The Golden Line (Hidden by default, width 0) */
+.pl-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--bronze);
+    transition: width 0.35s ease;
+}
+
+/* Pop-out and shadow on hover */
+.pl-card:hover {
+    transform: translateY(-5px);
+    /* Lifts the card up */
+    box-shadow: 6px 6px 0 rgba(168, 120, 41, 0.8);
+    /* Bronze hard shadow */
+    border-color: var(--bronze) !important;
+}
+
+/* Expand the golden line to 100% on hover */
+.pl-card:hover::before {
+    width: 100%;
+}
+
+/* 2. The Explore Button */
+.btn-dark {
+    background-color: var(--espresso);
+    border: 1px solid var(--espresso);
+    transition: all 0.25s ease;
+}
+
+.btn-dark:hover {
+    background-color: var(--wine);
+    /* Changes to deep red */
+    border-color: var(--wine);
+    transform: translate(-2px, -2px);
+    /* Pops out */
+    box-shadow: 4px 4px 0 var(--bronze) !important;
+    /* Hard shadow */
+}
+
+/* 3. The Icon inside the Card */
+.pl-icon-frame {
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.pl-card:hover .pl-icon-frame {
+    transform: rotate(45deg) scale(1.1);
+    /* Slightly grows the diamond */
+    border-color: var(--wine);
+    /* Turns from bronze to red */
+}
+
+.contact-panel {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .05);
+}
+
+.contact-panel .form-control {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #d7d7d7;
+}
+
+.contact-panel .form-control:focus {
+    box-shadow: none;
+    border-color: var(--bronze);
+    box-shadow: 0 0 0 3px rgba(168, 120, 41, 0.25) !important;
+}
+
+.contact-panel .btn-dark {
+    background: #111;
+    border: none;
+    transition: .3s;
+}
+
+.contact-panel .btn-dark:hover {
+    background: var(--bronze);
+}
+
+.text-bronze {
+    color: var(--bronze) !important;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+    background-color: var(--espresso);
+    color: var(--ivory);
+}
+
+/* Make sure the newsletter input placeholder is readable on dark background */
+.footer input::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Optional: Add a nice hover effect to footer links */
+.footer a:hover {
+    color: var(--gold) !important;
+    transition: color 0.2s ease;
+}
+
+/* Text Gold utility */
+.text-gold {
+    color: var(--gold) !important;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 45px 0 20px;
+    }
+
+    .footer-brand {
+        font-size: 24px;
+    }
+
+    .footer-heading {
+        font-size: 17px;
+    }
+
+    .footer-text {
+        font-size: 14px;
+    }
+
+    .footer-list a {
+        font-size: 14px;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .footer {
+        text-align: left;
+        padding: 35px 0 20px;
+    }
+
+    .footer-brand {
+        font-size: 23px;
+    }
+
+    .social-links a {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        margin-top: 25px;
+    }
+}
+
+/* =========================================
+   GALLERY SECTION
+   ========================================= */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    grid-auto-rows: 250px;
+    /* FORCES the rows to be exactly 250px tall */
+    gap: 15px;
+}
+
+/* Gallery Tiles */
+.g-tile {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+    /* Removed aspect-ratio, the grid handles the size now */
+}
+
+/* Make the first image span 2 columns and 2 rows */
+.g-tile:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Force images to fill the box and crop*/
+.g-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.g-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 20px 20px;
+
+    /* Dark gradient so the text is readable */
+
+    background: linear-gradient(to top, rgba(31, 24, 18, 0.95), transparent);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.35s ease;
+    pointer-events: none;
+    /* So it doesn't block the click */
+}
+
+/* Show overlay on hover */
+.g-tile:hover .g-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typography for the overlay matching the theme */
+.g-title {
+    color: var(--ivory);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    line-height: 1.1;
+}
+
+.g-desc {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.g-tile:hover img {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
+
+/* The "+" Icon on Hover */
+.g-tile::after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--espresso);
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.g-tile:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 250px;
+    }
+
+    .g-tile:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 2;
+        /* Keep it tall on mobile */
+    }
+
+    /* On mobile, we make the overlay always visible since there is no hover */
+    .g-overlay {
+        opacity: 1;
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(31, 24, 18, 0.9), transparent);
+    }
+}
+
+/* =========================================
+   BURGER MENU ANIMATION
+   ========================================= */
+/* Base state */
+body {
+    padding-bottom: 45px;
+    /* Space so ticker doesn't cover footer */
+}
+
+.hamburger-menu {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--espresso);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger-menu span:nth-child(2) {
+    top: 8px;
+}
+
+.hamburger-menu span:nth-child(3) {
+    top: 16px;
+}
+
+/* When menu is open (Bootstrap adds aria-expanded="true") */
+.navbar-toggler[aria-expanded="true"] .hamburger-menu span:nth-child(1) {
+    top: 8px;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+    left: -15px;
+}
+
+.navbar-toggler[aria-expanded="true"] .hamburger-menu span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-135deg);
+}
+
+/* =========================================
+   LIVE TICKER From Menus.io Git repo
+   ========================================= */
+.ticker-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--espresso);
+    color: var(--ivory);
+    padding: 10px 0;
+    overflow: hidden;
+    pointer-events: none;
+    /* Ensures it doesn't block scrolling */
+    z-index: 1050;
+    border-top: 1px solid var(--bronze);
+}
+
+.ticker {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    /* Starts off-screen */
+    animation: ticker 30s linear infinite;
+    /* The scrolling animation */
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ticker-item {
+    margin: 0 40px;
+}
+
+.ticker-item i {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+/* Pause animation if user hovers (optional) */
+.ticker-wrap:hover .ticker {
+    animation-play-state: paused;
+}
+
+/* =========================================
+   PRICE LIST SECTION
+   ========================================= */
+.price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--hair);
+    cursor: pointer;
+    transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.price-row:hover {
+    background: var(--ivory-2);
+    padding-left: 25px;
+    /* Creates the slide effect */
+}
+
+/* First row gets a top border */
+.price-row:first-child {
+    border-top: 1px solid var(--hair);
+}
+
+.price-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--bronze);
+    width: 40px;
+}
+
+.price-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    flex: 1;
+    /* Takes up remaining space */
+    color: var(--espresso);
+}
+
+.price-line {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--muted);
+    width: 130px;
+}
+
+.price-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: right;
+    width: 100px;
+}
+
+.price-arrow {
+    width: 30px;
+    text-align: right;
+    color: var(--bronze);
+    transition: transform 0.2s;
+}
+
+.price-row:hover .price-arrow {
+    transform: translateX(5px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .price-line {
+        display: none;
+    }
+
+    /* Hide collection on mobile */
+    .price-name {
+        font-size: 18px;
+    }
+}
+
+/* =========================================
+   NAVBAR (Glass Pill Effect)
+   ========================================= */
+.navbar {
+    padding-top: 20px;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.navbar-inner {
+    padding: 10px 30px;
+    transition: all 0.4s ease;
+    pointer-events: auto;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    /* Smooth transition setup */
+}
+
+/* When scrolled down (via JS) */
+body.scrolled .navbar {
+    padding-top: 10px;
+}
+
+body.scrolled .navbar-inner {
+    background: rgba(245, 239, 228, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Nav Link Animations */
+.nav-link {
+    color: var(--espresso) !important;
+    font-size: 13px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--bronze) !important;
+}
+
+/* The Diamond Logo */
+.brand-diamond {
+    width: 32px;
+    height: 32px;
+    background: var(--wine);
+    transform: rotate(45deg);
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.brand-diamond i {
+    transform: rotate(-45deg);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.navbar-brand:hover .brand-diamond {
+    transform: rotate(45deg) scale(1.1);
+    /* Little pop on hover */
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-main {
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--espresso);
+}
+
+.brand-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    color: var(--bronze);
+    margin-top: 4px;
+    letter-spacing: 0.1em;
+}
+
+/* =========================================
+   SECTION HEADERS
+   ========================================= */
+.sec-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--espresso);
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.sec-header h2 {
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+
+.sec-header .meta-text {
+    font-size: 10px;
+    color: var(--muted);
+    padding-bottom: 6px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   ABOUT & CONTACT SECTION
+   ========================================= */
+.ac-panel {
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Light Panel (About) */
+.ac-panel.about {
+    background: var(--ivory);
+    border: 1px solid var(--hair);
+}
+
+/* Dark Panel (Contact) */
+.ac-panel.contact {
+    background: var(--espresso);
+}
+
+/* The small pill tag */
+.ac-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.ac-panel.about .ac-tag {
+    background: rgba(168, 120, 41, 0.1);
+    border: 1px solid var(--hair);
+}
+
+.ac-panel.contact .ac-tag {
+    background: rgba(201, 164, 92, 0.15);
+    border: 1px solid rgba(201, 164, 92, 0.3);
+}
+
+/* The Drop Cap (Large first letter) */
+.ac-body.drop-cap::first-letter {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 0.8;
+    color: var(--wine);
+    float: left;
+    padding: 8px 12px 0 0;
+}
+
+/* The Custom Inputs for the Dark Background */
+.ac-input {
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+    padding-left: 0 !important;
+    box-shadow: none !important;
+    font-size: 14px;
+}
+
+.ac-input::placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.ac-input:focus {
+    border-bottom-color: var(--gold) !important;
+}

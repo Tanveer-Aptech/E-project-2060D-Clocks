@@ -1,0 +1,23 @@
+{
+  "productLines": [
+    { "id": "vintage", "name": "Vintage", "icon": "bi-hourglass", "description": "Archive-inspired, hand-wound mechanicals.", "roman": "I" },
+    { "id": "luxury", "name": "Luxury", "icon": "bi-gem", "description": "Precious metals, tourbillons, hand-finishing.", "roman": "II" },
+    { "id": "smart", "name": "Smart Watches", "icon": "bi-cpu", "description": "Connected, with proper Swiss cases.", "roman": "III" },
+    { "id": "sport", "name": "Sport", "icon": "bi-stopwatch", "description": "Precision instruments for the field.", "roman": "IV" }
+  ],
+  "watches": [
+    { "id": 1, "name": "Heritage 1952", "line": "Vintage", "price": 2450, "description": "Hand-wound, 38mm steel.", "img": "assets/Images/card1.jpg" },
+    { "id": 2, "name": "Classic Roman", "line": "Vintage", "price": 1890, "description": "Roman numerals, small seconds.", "img": "assets/Images/card2.jpg" },
+    { "id": 3, "name": "Art Deco 1928", "line": "Vintage", "price": 3150, "description": "Limited edition, gold-plated case.", "img": "assets/Images/card3.jpg" },
+    { "id": 4, "name": "Platinum Regent", "line": "Luxury", "price": 8900, "description": "Platinum case, tourbillon.", "img": "assets/Images/card4.jpg" },
+    { "id": 5, "name": "Diamond Éclat", "line": "Luxury", "price": 6700, "description": "18k white gold, diamond bezel.", "img": "assets/Images/card5.jpg" },
+    { "id": 6, "name": "Skeleton Grande", "line": "Luxury", "price": 10500, "description": "Open-worked movement, rose gold.", "img": "assets/Images/card6.jpg" }
+  ],
+    "gallery": [
+    { "img": "assets/Images/card1.jpg", "alt": "Dial close-up",  "title": "Platinum Regent",    "desc": "Tourbillon Movement" },
+    { "img": "assets/Images/card2.jpg", "alt": "Classic watch" ,  "title": "Heritage 1952",   "desc": "Hand-Wound Mechanical" },
+    { "img": "assets/Images/card3.jpg", "alt": "Art Deco" ,   "title": "Classic Roman" ,      "desc": "Gold-Plated Case"},
+    { "img": "assets/Images/card4.jpg", "alt": "Diamond watch" ,  "title": "Art Deco 1952" ,  "desc": "Mother-of-pearl dial"},
+    {"img": "assets/Images/card5.jpg", "alt": "Diamond watch" ,   "title": "Eye of Horus" ,  "desc": "Artistry of Horus"},
+    {"img": "assets/Images/card6.jpg", "alt": "Diamond watch" ,  "title": "Diamond Éclat" ,   "desc": "Golden-Hour"}]
+    } 
