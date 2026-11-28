@@ -232,4 +232,33 @@ $(document).ready(function () {
     applyTheme(newTheme);
     localStorage.setItem("albertoTheme", newTheme);
   });
+   // =========================================
+  // SCROLL COMPASS ANIMATION via menus.ui git repo
+  // =========================================
+  // Map the sections to specific angles (0 is pointing Left)
+  var sections = [
+    { id: "#top", angle: -45 },          // Points Up-Left
+    { id: "#collections", angle: 0 },    // Points Left
+    { id: "#gallery", angle: 45 },       // Points Down-Left
+    { id: "#priceList", angle: 90 },     // Points Down
+    { id: "#aboutContact", angle: 135 }  // Points Down-Right
+  ];
+
+  $(window).on("scroll", function () {
+    // Get the current scroll position, plus half the window height 
+    // to detect what is in the middle of the screen
+    var scrollPos = $(this).scrollTop() + ($(window).height() / 2);
+    var currentAngle = -45; // Default to Hero angle
+
+    // Loop through our sections and see which one we are currently looking at
+    sections.forEach(function (sec) {
+      var sectionTop = $(sec.id).offset().top;
+      if (scrollPos >= sectionTop) {
+        currentAngle = sec.angle;
+      }
+    });
+
+    // Rotate the hand!
+    $("#compassHand").css("transform", "rotate(" + currentAngle + "deg)");
+  });
 });
