@@ -201,4 +201,9 @@ $(document).ready(function () {
       $("#contactForm").find("button[type='submit']").html('Send Enquiry <i class="bi bi-arrow-right ms-1"></i>').prop("disabled", false);
     }, 1000);
   });
+
+    // Visitor Counter 
+  var visitors = parseInt(localStorage.getItem("albertoVisitors") || "3241", 10) + 1;
+  localStorage.setItem("albertoVisitors", visitors);
+  $("#visitorCount").text(visitors.toLocaleString());
 });
