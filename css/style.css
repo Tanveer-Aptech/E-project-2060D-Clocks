@@ -597,6 +597,31 @@ body {
 }
 
 /* =========================================
+   TICKER WIDTH & SPACING 
+   ========================================= */
+.ticker-wrap {
+  max-width: 95%; 
+  margin: 0 auto; 
+  left: 0;
+  right: 0;
+  border-radius: 8px 8px 0 0; /* Rounds the top corners */
+  border-left: 1px solid var(--hair); /* Optional: adds a subtle border */
+  border-right: 1px solid var(--hair);
+}
+
+
+.ticker-item {
+  margin: 0 25px !important; /* Reduced from 40px to 25px */
+}
+
+/* On ultra-wide screens, match the 1500px cap */
+@media (min-width: 1600px) {
+  .ticker-wrap {
+    max-width: 1500px;
+  }
+}
+
+/* =========================================
    PRICE LIST SECTION
    ========================================= */
 .price-row {
@@ -792,7 +817,7 @@ body.scrolled .navbar-inner {
 }
 
 /* =========================================
-   SOCIAL MEDIA ICONS (Catch-All Fix)
+   SOCIAL MEDIA ICONS
    ========================================= */
 .footer a i,
 .footer a svg {
@@ -883,6 +908,118 @@ body.scrolled .navbar-inner {
 
 .ac-input:focus {
     border-bottom-color: var(--gold) !important;
+}
+
+/* =========================================
+   1. WIDER LAYOUT (Less empty space on sides)
+   ========================================= */
+/* On large screens, let the container stretch wider than Bootstrap's default 1140px */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px; /* Increases overall width */
+    width: 92%;
+  }
+}
+
+/* =========================================
+   2. TABLET & MOBILE RESPONSIVENESS (max-width: 991px)
+   ========================================= */
+@media (max-width: 991px) {
+  /* --- Navbar --- */
+  .navbar { padding-top: 10px; }
+  .navbar-inner { padding: 10px 15px; border-radius: 20px; }
+  
+  /* --- Hero Section --- */
+  .hero { padding: 120px 0 40px; text-align: center; }
+  .hero-h { font-size: 3rem; }
+  .hero-eyebrow { justify-content: center; }
+  
+  /* Make the hero image responsive instead of a fixed box */
+  .hero-img-wrapper {
+    max-width: 100%;
+    height: 350px;
+    margin-top: 30px;
+  }
+  
+  /* Stack the stats 2x2 instead of 4 in a row */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  .hero-stats > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--hair);
+    padding-bottom: 15px;
+  }
+  .hero-stats > div:nth-child(3),
+  .hero-stats > div:nth-child(4) {
+    border-bottom: none;
+  }
+
+  /* --- Section Headers --- */
+  .sec-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  
+  /* --- Gallery Grid --- */
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    grid-auto-rows: 250px;
+  }
+  .g-tile:nth-child(1) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+/* =========================================
+   3. PHONE RESPONSIVENESS (max-width: 767px)
+   ========================================= */
+@media (max-width: 767px) {
+  /* --- Hero Text --- */
+  .hero-h { font-size: 2.5rem; }
+  
+  /* --- Price List --- */
+  /* Stack the price row vertically so it doesn't squish */
+  .price-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 10px;
+    position: relative;
+  }
+  .price-name { font-size: 18px; margin-bottom: 5px; }
+  .price-line { margin-bottom: 5px; }
+  
+  /* Push the price to the top right of the row */
+  .price-value {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    font-size: 14px;
+  }
+  .price-arrow { display: none; } /* Hide arrow on mobile */
+
+  /* --- About / Contact Forms --- */
+  .ac-panel { padding: 20px !important; }
+  
+  /* --- Footer --- */
+  .footer { text-align: center; }
+  .footer .d-flex { justify-content: center !important; }
+}
+
+/* =========================================
+   1. WIDER LAYOUT
+   ========================================= */
+/* Override Bootstrap's hardcoded 1320px limit */
+.container {
+  max-width: 95% !important; /* Takes up 95% of the screen */
+}
+
+/* On ultra-wide screens, cap it a bit so it doesn't stretch too far */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1500px !important;
+  }
 }
 
 /* =========================================
