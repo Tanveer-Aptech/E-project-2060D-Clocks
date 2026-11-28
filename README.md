@@ -2,15 +2,15 @@
 
 A responsive, single-page web application (SPA) built for **Alberto Watch Company**. This project serves as a digital storefront for a full-service luxury watch repair, appraisal, and retail store. 
 
-## 🚀 Live Demo
+##  Live Demo
 Check out the deployed website here: https://alberto-clocks-six.vercel.app/
 
-## 📋 Project Overview
+## Project Overview
 The website is designed to be highly responsive, working seamlessly across desktop, tablet, and mobile browsers. It features a modern, editorial-style layout with a luxury aesthetic (cream, espresso, and bronze color palette). 
 
 The application dynamically fetches product data from a local JSON file, rendering the UI on the fly without needing to reload the page.
 
-## 🛠️ Tech Stack
+## Tech Stack
  **Frontend:** HTML5, CSS3
  **Framework:** Bootstrap 5 (used extensively for layout, grids, modals, and utilities)
  **Languages:** JavaScript (ES6), jQuery
@@ -19,7 +19,7 @@ The application dynamically fetches product data from a local JSON file, renderi
  **Icons:** Bootstrap Icons
  **Deployment:** Vercel
 
-## ✨ Key Features According to Problem Statement Compliance
+## Key Features According to Problem Statement Compliance
 **Dynamic Collections:** Products are categorized into four distinct lines (Vintage, Luxury, Smart Watches, Sport).
 **Interactive Popups:** Clicking any watch opens a Bootstrap-powered modal displaying full details, high-res imagery, and pricing.
 **Live Price List:** A searchable and sortable table of all available watches.
