@@ -29,7 +29,7 @@ The application dynamically fetches product data from a local JSON file, renderi
 **Visitor Counter:** Tracks and displays the number of visitors using `localStorage`.
 **Responsive Navbar:** A floating, glassmorphism navigation bar that animates into a pill shape on scroll, with an animated hamburger menu for mobile.
 
-How to Run Locally
+** How to Run Locally
 Because this project uses AJAX ($.getJSON) to fetch data from a JSON file, you cannot simply double-click index.html. Modern browsers block local file requests for security reasons (CORS policy).
 
 *Clone the repository to your local machine.
