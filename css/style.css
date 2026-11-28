@@ -792,6 +792,25 @@ body.scrolled .navbar-inner {
 }
 
 /* =========================================
+   SOCIAL MEDIA ICONS (Catch-All Fix)
+   ========================================= */
+.footer a i,
+.footer a svg {
+  color: var(--gold) !important; 
+  fill: var(--gold) !important;
+  font-size: 20px;
+  margin-right: 10px; /* Space between icons */
+  transition: all 0.3s ease;
+}
+
+.footer a:hover i,
+.footer a:hover svg {
+  color: var(--ivory) !important; 
+  fill: var(--ivory) !important;
+  transform: translateY(-3px);
+}
+
+/* =========================================
    ABOUT & CONTACT SECTION
    ========================================= */
 .ac-panel {
@@ -865,3 +884,9 @@ body.scrolled .navbar-inner {
 .ac-input:focus {
     border-bottom-color: var(--gold) !important;
 }
+
+/* =========================================
+   DARK MODE Via Menus.ui Git repo (Fixed for hard coded Bootstrap classes) (Minified CSS)
+   ========================================= */
+   body[data-theme=dark]{--ivory:#12100e;--ivory-2:#1c1815;--espresso:#f5efe4;--hair:#332b26;--muted:#a39a8e}body[data-theme=dark] .ac-panel.contact .text-white,body[data-theme=dark] .ac-panel.contact h3,body[data-theme=dark] .brand-main,body[data-theme=dark] .nav-link,body[data-theme=dark] .pl-card h3,body[data-theme=dark] .price-name,body[data-theme=dark] .price-value,body[data-theme=dark] .text-body,body[data-theme=dark] .text-dark,body[data-theme=dark] h1,body[data-theme=dark] h2,body[data-theme=dark] h3,body[data-theme=dark] h4,body[data-theme=dark] h5,body[data-theme=dark] h6,body[data-theme=dark] p{color:var(--espresso)!important}body[data-theme=dark] .hero-h em{color:var(--gold)!important}body[data-theme=dark] .btn-dark{background-color:var(--espresso)!important;color:var(--ivory)!important;border-color:var(--espresso)!important}body[data-theme=dark] .btn-dark:hover{background-color:var(--gold)!important;color:var(--ivory)!important;border-color:var(--gold)!important}body[data-theme=dark] .btn-link.text-dark{color:var(--espresso)!important;border-bottom-color:var(--espresso)!important}body[data-theme=dark] .bg-white .text-muted,body[data-theme=dark] .text-muted{color:var(--muted)!important}body[data-theme=dark] .bg-white,body[data-theme=dark] .pl-card{background-color:var(--ivory-2)!important;border-color:var(--hair)!important}body[data-theme=dark] .price-row{border-bottom-color:var(--hair)!important}body[data-theme=dark] .price-row:hover{background-color:var(--ivory-2)!important}body[data-theme=dark] .form-control,body[data-theme=dark] input,body[data-theme=dark] textarea{color:var(--espresso)!important;border-color:var(--hair)!important}body[data-theme=dark] .form-control::placeholder,body[data-theme=dark] input::placeholder,body[data-theme=dark] textarea::placeholder{color:#6b6355!important}body[data-theme=dark] .ac-panel.contact,body[data-theme=dark] .footer{background-color:#0a0908!important}.ac-panel,.bg-white,.btn-dark,.nav-link,.navbar-inner,.pl-card,.price-row,body{transition:background-color .3s,color .3s,border-color .3s}
+   body[data-theme=dark] .pl-icon-frame i{color:var(--gold)!important}body[data-theme=dark] .pl-card .flex-grow-1{background-color:var(--bronze)!important;opacity:.6}body[data-theme=dark] .pl-card h3{color:var(--espresso)!important}body[data-theme=dark] .pl-card p{color:var(--muted)!important}

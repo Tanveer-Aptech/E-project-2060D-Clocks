@@ -63,7 +63,7 @@ $(document).ready(function () {
           <div class="price-num">${num}</div>
           <div class="price-name">${watch.name}</div>
           <div class="price-line">${watch.line}</div>
-          <div class="price-value">$${watch.price.toLocaleString()}</div>
+          <div class="price-value">Rs. ${watch.price.toLocaleString()}</div>
           <div class="price-arrow"><i class="bi bi-arrow-right"></i></div>
         </div>
       `;
@@ -123,7 +123,7 @@ $(document).ready(function () {
             <p class="text-muted">${watch.description}</p>
             
             <div class="font-mono fs-4 text-bronze mt-4 mb-4">
-              $${watch.price.toLocaleString()}
+              Rs. ${watch.price.toLocaleString()}
             </div>
             
             <ul class="list-unstyled font-mono text-muted small border-top pt-3 border-hair">
@@ -206,4 +206,30 @@ $(document).ready(function () {
   var visitors = parseInt(localStorage.getItem("albertoVisitors") || "3241", 10) + 1;
   localStorage.setItem("albertoVisitors", visitors);
   $("#visitorCount").text(visitors.toLocaleString());
+
+    // =========================================
+  // DARK MODE TOGGLE Via Menus.ui git repo
+  // =========================================
+  
+  var currentTheme = localStorage.getItem("albertoTheme") || "light";
+  
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      $("body").attr("data-theme", "dark");
+      $("#themeIcon").removeClass("bi-moon-fill").addClass("bi-sun-fill");
+    } else {
+      $("body").removeAttr("data-theme");
+      $("#themeIcon").removeClass("bi-sun-fill").addClass("bi-moon-fill");
+    }
+  }
+  
+  // Apply theme on page load
+  applyTheme(currentTheme);
+  
+  // Toggle theme on button click
+  $("#themeToggle").on("click", function() {
+    var newTheme = $("body").attr("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(newTheme);
+    localStorage.setItem("albertoTheme", newTheme);
+  });
 });

@@ -6,12 +6,12 @@
     { "id": "sport", "name": "Sport", "icon": "bi-stopwatch", "description": "Precision instruments for the field.", "roman": "IV" }
   ],
   "watches": [
-    { "id": 1, "name": "Heritage 1952", "line": "Vintage", "price": 2450, "description": "Hand-wound, 38mm steel.", "img": "assets/Images/card1.jpg" },
-    { "id": 2, "name": "Classic Roman", "line": "Vintage", "price": 1890, "description": "Roman numerals, small seconds.", "img": "assets/Images/card2.jpg" },
-    { "id": 3, "name": "Art Deco 1928", "line": "Vintage", "price": 3150, "description": "Limited edition, gold-plated case.", "img": "assets/Images/card3.jpg" },
-    { "id": 4, "name": "Platinum Regent", "line": "Luxury", "price": 8900, "description": "Platinum case, tourbillon.", "img": "assets/Images/card4.jpg" },
-    { "id": 5, "name": "Diamond Éclat", "line": "Luxury", "price": 6700, "description": "18k white gold, diamond bezel.", "img": "assets/Images/card5.jpg" },
-    { "id": 6, "name": "Skeleton Grande", "line": "Luxury", "price": 10500, "description": "Open-worked movement, rose gold.", "img": "assets/Images/card6.jpg" }
+    { "id": 1, "name": "Heritage 1952", "line": "Vintage", "price": 68600, "description": "Hand-wound, 38mm steel.", "img": "assets/Images/card1.jpg" },
+    { "id": 2, "name": "Classic Roman", "line": "Vintage", "price": 529200, "description": "Roman numerals, small seconds.", "img": "assets/Images/card2.jpg" },
+    { "id": 3, "name": "Art Deco 1928", "line": "Vintage", "price": 882900, "description": "Limited edition, gold-plated case.", "img": "assets/Images/card3.jpg" },
+    { "id": 4, "name": "Platinum Regent", "line": "Luxury", "price": 249000, "description": "Platinum case, tourbillon.", "img": "assets/Images/card4.jpg" },
+    { "id": 5, "name": "Diamond Éclat", "line": "Luxury", "price": 187000, "description": "18k white gold, diamond bezel.", "img": "assets/Images/card5.jpg" },
+    { "id": 6, "name": "Skeleton Grande", "line": "Luxury", "price": 294000, "description": "Open-worked movement, rose gold.", "img": "assets/Images/card6.jpg" }
   ],
     "gallery": [
     { "img": "assets/Images/card1.jpg", "alt": "Dial close-up",  "title": "Platinum Regent",    "desc": "Tourbillon Movement" },
